@@ -17,7 +17,7 @@
 
 .commentContent {
   background: var(--gray-700);
-  border-radius: 8px;
+  border-radius: 0 12px 12px 12px;
   padding: 1rem;
 }
 
