@@ -2,7 +2,7 @@ import { DialogTrigger } from '@radix-ui/react-dialog'
 import { ArrowRight, Search, X } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { Dialog} from '@/components/ui/dialog'
+import { Dialog } from '@/components/ui/dialog'
 import { TableCell, TableRow } from '@/components/ui/table'
 
 import { OrderDetails } from './orders-details'
