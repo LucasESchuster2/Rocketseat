@@ -28,14 +28,15 @@ export function OrderTableFilter() {
   const orderId = searchParams.get('orderId')
   const customerName = searchParams.get('customerName')
   const status = searchParams.get('status')
-  const { register, handleSubmit, control } = useForm<OrderFiltersSchema>({
-    resolver: zodResolver(orderFiltersSchema),
-    defaultValues: {
-      orderId: orderId ?? '',
-      customerName: customerName ?? '',
-      status: status ?? 'all',
-    },
-  })
+  const { register, handleSubmit, control, reset } =
+    useForm<OrderFiltersSchema>({
+      resolver: zodResolver(orderFiltersSchema),
+      defaultValues: {
+        orderId: orderId ?? '',
+        customerName: customerName ?? '',
+        status: status ?? 'all',
+      },
+    })
 
   function handleFilter({ orderId, customerName, status }: OrderFiltersSchema) {
     setSearchParams((urlState) => {
@@ -55,7 +56,7 @@ export function OrderTableFilter() {
         urlState.delete('status')
       }
 
-      urlState.set('page', 1)
+      urlState.set('page', '1')
       return urlState
     })
   }
