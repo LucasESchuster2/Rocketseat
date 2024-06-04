@@ -1,0 +1,3 @@
+[submodule "ignite/ignite/reactjs/aulas/pizzashop-api"]
+	path = ignite/ignite/reactjs/aulas/pizzashop-api
+	url = https://github.com/rocketseat-education/pizzashop-api.git
